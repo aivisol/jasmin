@@ -311,7 +311,7 @@ class deliverSmThrower(Thrower):
                                msgid, content)
 
                 # Check for acknowledgement
-                if content.strip() != 'ACK/Jasmin':
+                if content.strip() != 'ACK':
                     raise MessageAcknowledgementError(
                         'Destination end did not acknowledge receipt of the message.')
             except Exception as e:
@@ -544,7 +544,7 @@ class DLRThrower(Thrower):
 
             self.log.debug('Destination end replied to message [msgid:%s]: %r', msgid, content)
             # Check for acknowledgement
-            if content.strip() != 'ACK/Jasmin':
+            if content.strip() != 'ACK':
                 raise MessageAcknowledgementError(
                     'Destination end did not acknowledge receipt of the DLR message.')
 
