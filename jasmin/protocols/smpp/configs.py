@@ -183,7 +183,7 @@ class SMPPClientConfig(object):
         self.requeue_delay = kwargs.get('requeue_delay', 120)
         if not isinstance(self.requeue_delay, int) and not isinstance(self.requeue_delay, float):
             raise TypeMismatch('requeue_delay must be an integer or float')
-        self.submit_sm_throughput = kwargs.get('submit_sm_throughput', 1)
+        self.submit_sm_throughput = kwargs.get('submit_sm_throughput', 100)
         if (not isinstance(self.submit_sm_throughput, int)
             and not isinstance(self.submit_sm_throughput, float)):
             raise TypeMismatch('submit_sm_throughput must be an integer or float')
